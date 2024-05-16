@@ -8,7 +8,7 @@ function Userroute() {
     <div>
       <Routes>
         <Route path='/login' element={<Loginpage/>}/>
-        <Route path='/home'element={<Homepage/>}/>
+        {/* <Route path='/home'element={<Homepage/>}/> */}
       </Routes>
     </div>
   )

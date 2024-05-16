@@ -8,13 +8,14 @@ import Homepage from './Pages/User/Homepage';
 function App() {
   return (
     <div >
-      <BrowserRouter>
+      </Registrationpage>
+      {/* <BrowserRouter>
       <Routes>
         <Route path='/*'element={<Userroute/>}/>
         <Route path='/admin/*'element={<Adminroute/>}/>
         
       </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
