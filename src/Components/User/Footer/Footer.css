@@ -1,0 +1,139 @@
+/* /* #footermain{
+background-color: #a4a2ad;
+/* opacity: .5; */
+/* height:300px;
+width: auto; */ */
+
+/* } */
+#footermain {
+    background-color: #0d4d8d;
+    padding: 20px 0;
+    color: #c4b1b1;
+    /* max-width: 100%; */
+}
+
+.container {
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dee1e4;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #d5dadf;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-media li a:hover {
+    color: #e6ecf1;
+}
+
+
+
+
+#footermain {
+    background-color: #d4dde7;
+    padding: 20px 0;
+    color: #333;
+    width: 100%;  /* Ensures the footer spans the full width */
+    box-sizing: border-box;  /* Ensures padding is included in the width calculation */
+}
+
+.container {
+    width: 100%;  /* Ensures the container spans the full width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dee1e4;
+    padding: 0 20px;  /* Adds some padding to the sides */
+    box-sizing: border-box;  /* Ensures padding is included in the width calculation */
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-media li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-media li a:hover {
+    color: #007bff;
+}
+

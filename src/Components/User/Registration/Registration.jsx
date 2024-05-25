@@ -31,7 +31,7 @@ const Registrationpage = () => {
     };
 
     return (
-        <div>
+        <div id='bg'>
             <h2><center>Signup</center></h2>
             <Formik
                 initialValues={initialValues}
@@ -70,7 +70,7 @@ const Registrationpage = () => {
                         <button type="submit" disabled={isSubmitting}>Sign Up</button>
                         </div>
                     </Form>
-                    <p>If you already have an account, <Link to="/login">sign in</Link>.</p>
+                    <p className='letter'>If you already have an account please ... <Link to="/login">sign in</Link>.</p>
 </center>
                 )}
                

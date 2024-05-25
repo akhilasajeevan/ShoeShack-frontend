@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Userroute from './Route/Userroute';
 import Adminroute from './Route/Adminroute';
-import Registrationpage from './Pages/User/Registrationpage';
+// import Registrationpage from './Pages/User/Registrationpage';
 
 function App() {
   return (

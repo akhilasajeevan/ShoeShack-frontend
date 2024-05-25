@@ -1,9 +1,13 @@
 import React from 'react'
-
+import Login from '../../Components/User/Login/Login'
+import Header from '../../Components/User/Header/Header'
+import Footer from '../../Components/User/Footer/Footer'
 function Loginpage() {
   return (
     <div>
-      <h1>User login</h1>
+      <Header/>
+      <Login/>
+      <Footer/>
     </div>
   )
 }
