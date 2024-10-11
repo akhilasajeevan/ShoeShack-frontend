@@ -1,100 +1,223 @@
-// import React from 'react'
-// import './Productlist.css'
-// import { Link} from 'react-router-dom';
-// function ProductList() {
-  
+
+
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import { FaHeart, FaShoppingCart } from 'react-icons/fa';
+// import './Productlist.css';
+// import { addtocart, getproducts } from '../../../Services/userApi';
+// import { useNavigate } from 'react-router-dom';
+// import {jwtDecode} from 'jwt-decode';
+
+// const Productlist = () => {
+//   const [products, setProducts] = useState([]);
+//   const navigate = useNavigate();
+
+//   const token = localStorage.getItem("token");
+//   const decodedToken = jwtDecode(token);
+
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       try {
+//         const response = await getproducts();
+//         if (response.data.status) {
+//           setProducts(response.data.products); 
+//         } else {
+//           console.log("No products found");
+//         }
+//       } catch (error) {
+//         console.log("Error fetching products", error);
+//       }
+//     };
+
+//     fetchProducts();
+//   }, []);
+
+ 
+
+//   const handleAddToCart = async (productId) => {
+//     try {
+//       const response = await addtocart(productId, decodedToken.id);
+      
+//       if (response.data.status) {
+//         navigate('/cart');  
+//       } else {
+//         console.log("Failed to add product to cart");
+//       }
+//     } catch (error) {
+//       console.log("Error adding product to cart", error);
+//     }
+//   };
+
 //   return (
-//     <div className="product-list">
-//       <div className="gallery">
-//       <Link to="/product-details/1">
-//         {/* <a target="_blank" href="https://images.pexels.com/photos/1537671/pexels-photo-1537671.jpeg?auto=compress&cs=tinysrgb&w=600"> */}
-//           <img src="https://images.pexels.com/photos/1537671/pexels-photo-1537671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cinque Terre" width="300" height="200" />
-//         {/* </a> */}
-//         </Link>
-//         <div className="desc">kardam&sons Luxury Casual Fashionable Shoes
-//           ₹599
-//           Amazon.in</div>
-//       </div>
-
-//       <div className="gallery">
-//       <Link to="/product-details/1">
-//         {/* <a target="_blank" href="https://images.pexels.com/photos/273930/pexels-photo-273930.jpeg?auto=compress&cs=tinysrgb&w=600"> */}
-//           <img src="https://images.pexels.com/photos/273930/pexels-photo-273930.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Forest" width="300" height="200" />
-//         {/* </a> */}
-//         </Link>
-//         <div className="desc">Roadster women White & Grey Colourblocked Sneakers by Myntra
-//           ₹759
-//           Myntra</div>
-//       </div>
-
-//       <div className="gallery">
-//       <Link to="/product-details/1">
-//         {/* <a target="_blank" href="https://images.pexels.com/photos/2965276/pexels-photo-2965276.jpeg?auto=compress&cs=tinysrgb&w=600"> */}
-//           <img src="https://images.pexels.com/photos/2965276/pexels-photo-2965276.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Northern Lights" width="300" height="200" />
-//         {/* </a> */}
-//         </Link>
-//         <div className="desc">women Shoes Online | Latest women Footwear Collection | Fausto-In 7
-//           ₹1,999
-//           Fausto</div>
-//       </div>
-
-//       <div className="gallery">
-//         <Link to="/product-details/1">
-//         {/* <a target="_blank" href="https://images.pexels.com/photos/2759783/pexels-photo-2759783.jpeg?auto=compress&cs=tinysrgb&w=600"> */}
-//           <img src="https://images.pexels.com/photos/2759783/pexels-photo-2759783.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains" width="300" height="200" />
-//         {/* </a> */}
-//         </Link>
-//         <div className="desc">MVees Stylish casual Shoes For men Outdoors For Men -- Shop Online for
-//           ₹1,270
-//           Flipkart</div>
-//       </div>
+//     <div className="card-container">
+//       {products.map(product => (
+//         <div key={product._id} className="card">
+//           <div className="icons">
+//             <FaHeart className="icon heart-icon" />
+//             <FaShoppingCart onClick={() => handleAddToCart(product._id)} className="icon cart-icon" />
+//           </div>
+//           <img
+//             src={`http://localhost:4000${product.imageUrl}`}
+//             alt={product.productName}
+//             className="shoe-image"
+//             onClick={() => navigate(`/product/${product._id}`)} // Navigate to Singleproduct page
+//           />
+//           <div className="card-description">
+//             <p style={{ color: 'brown', fontStyle: 'italic' }}>{product.productName}</p>
+//             <div className="price">
+//               <span className="original-price">₹{product.price}</span>
+//             </div>
+//             <p>{product.description}</p>
+//           </div>
+//         </div>
+//       ))}
 //     </div>
 //   );
-// }
+// };
 
-// export default ProductList;
-
-
+// export default Productlist;
 
 
 
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import './Productlist.css';
-import { Link } from 'react-router-dom';
-function ProductList() {
-  return (
-    <div className="product-list">
-      <div className="gallery">
-        <Link to="/product-details/1">
-          <img src="https://images.pexels.com/photos/1537671/pexels-photo-1537671.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cinque Terre" width="300" height="200" />
-        </Link>
-        <div className="desc">kardam&sons Luxury Casual Fashionable Shoes ₹599 Amazon.in</div>
-      </div>
+import { addtocart, getproducts,addtowishlist } from '../../../Services/userApi';
+import { useNavigate } from 'react-router-dom';
+import {jwtDecode} from 'jwt-decode';
 
-      <div className="gallery">
-        <Link to="/product-details/2">
-          <img src="https://images.pexels.com/photos/273930/pexels-photo-273930.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Forest" width="300" height="200" />
-        </Link>
-        <div className="desc">Roadster women White & Grey Colourblocked Sneakers by Myntra ₹759 Myntra</div>
-      </div>
+const Productlist = () => {
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
-      <div className="gallery">
-        <Link to="/product-details/3">
-          <img src="https://images.pexels.com/photos/2965276/pexels-photo-2965276.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Northern Lights" width="300" height="200" />
-        </Link>
-        <div className="desc">women Shoes Online | Latest women Footwear Collection | Fausto-In 7 ₹1,999 Fausto</div>
-      </div>
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    let decodedToken;
 
-      <div className="gallery">
-        <Link to="/product-details/4">
-          <img src="https://images.pexels.com/photos/2759783/pexels-photo-2759783.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mountains" width="300" height="200" />
-        </Link>
-        <div className="desc">MVees Stylish casual Shoes For men Outdoors For Men -- Shop Online for ₹1,270 Flipkart</div>
-      </div>
+    if (token) {
+      try {
+        decodedToken = jwtDecode(token);
+      } catch (error) {
+        console.error("Invalid token:", error);
+        // Handle the error (e.g., redirect to login page)
+        navigate('/login');
+        return;
+      }
+    } else {
+      // Handle the case where the token is not found (e.g., redirect to login page)
+      navigate('/login');
+      return;
+    }
+
+    const fetchProducts = async () => {
+      try {
+        const response = await getproducts();
+        if (response.data.status) {
+          setProducts(response.data.products); 
+        } else {
+          console.log("No products found");
+        }
+      } catch (error) {
+        console.log("Error fetching products", error);
+      }
+    };
+
+    fetchProducts();
+  }, [navigate]);
+
+  const handleAddToCart = async (productId) => {
+    const token = localStorage.getItem("token");
+    let decodedToken;
+
+    if (token) {
+      try {
+        decodedToken = jwtDecode(token);
+      } catch (error) {
+        console.error("Invalid token:", error);
       
+        navigate('/login');
+        return;
+      }
+    } else {
+     
+      navigate('/login');
+      return;
+    }
+
+    try {
+      const response = await addtocart(productId, decodedToken.id);
+      if (response.data.status) {
+        navigate('/cart');  
+      } else {
+        console.log("Failed to add product to cart");
+      }
+    } catch (error) {
+      console.log("Error adding product to cart", error);
+    }
+  };
+// from addtowishlist
+const handleAddToWishlist = async (productId) => {
+  const token = localStorage.getItem("token");
+  let decodedToken;
+
+  if (token) {
+    try {
+      decodedToken = jwtDecode(token);
+    } catch (error) {
+      console.error("Invalid token:", error);
+    
+      navigate('/login');
+      return;
+    }
+  } else {
+   
+    navigate('/login');
+    return;
+  }
+
+  try {
+    const response = await addtowishlist(productId, decodedToken.id);
+    if (response.data.status) {
+      navigate('/wishlist');  
+    } else {
+      console.log("Failed to add product to wishlist");
+    }
+  } catch (error) {
+    console.log("Error adding product to wishlist", error);
+  }
+};
+
+
+// towishlist
+  return (
+    <div className="card-container">
+      {products.map(product => (
+        <div key={product._id} className="card">
+          <div className="icons">
+            <FaHeart onClick={() => handleAddToWishlist(product._id)}className="icon heart-icon" />
+            <FaShoppingCart onClick={() => handleAddToCart(product._id)} className="icon cart-icon" />
+          </div>
+          <img
+            src={`http://localhost:4000${product.imageUrl}`}
+            alt={product.productName}
+            className="shoe-image"
+            onClick={() => navigate(`/product/${product._id}`)} 
+          />
+          <div className="card-description">
+            <p style={{ color: 'brown', fontStyle: 'italic' }}>{product.productName}</p>
+            <div className="price">
+              <span className="original-price">₹{product.price}</span>
+            </div>
+            <p>{product.description}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export default ProductList;
+export default Productlist;
+

@@ -1,34 +1,175 @@
-.product-list {
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
-  overflow-x: auto; /* Enable horizontal scrolling if necessary */
-  padding: 10px;
-}
-
-.gallery {
-  /* flex: 0 0 auto; /* Let each item take its natural width */
-  /* margin-right: 20px; /* Spacing between products */
-  /* width: 300px; /* Set a fixed width for each image container */
-  /* margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;  */
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-  background-color: antiquewhite;
-}
-
-.gallery img {
-  width: 100%; /* Ensure the image fills its container */
-  height: auto;
-  
-}
-
-.desc {
+/* 
  
+
+
+
+ .card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; 
   padding: 15px;
   text-align: center;
+  position: relative;
+}
 
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.shoe-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card-description {
+  margin-top: 10px;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.price {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.original-price {
+  font-size: 1.1em;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+} */
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%; 
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  color: rgb(241, 234, 234);
+}
+
+.icon {
+  background: rgba(12, 1, 1, 0.8);
+  border-radius: 50%;
+  padding: 8px; 
+  cursor: pointer;
+  font-size:2em; 
+}
+
+.icon:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.shoe-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px; 
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card-description {
+  margin-top: 10px;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.price {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.original-price {
+  font-size: 1.1em;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }

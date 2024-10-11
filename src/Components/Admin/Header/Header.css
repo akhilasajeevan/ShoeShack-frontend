@@ -1,0 +1,31 @@
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+   gap: 30px;
+  }
+  
+  .logo h2 {
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    margin-left: 30px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+color: black;
+
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  

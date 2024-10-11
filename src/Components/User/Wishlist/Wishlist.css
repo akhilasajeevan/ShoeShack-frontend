@@ -1,0 +1,57 @@
+.header__container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header__table th,
+.header__table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.header__table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.header__product-image {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures image fits within the box without distorting */
+}
+
+.header__original-price {
+    text-decoration: line-through;
+    margin-right: 10px;
+    color: #888;
+}
+
+.header__discount-price {
+    color: red;
+    font-weight: bold;
+}
+
+.header__add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header__add-to-cart-btn:hover {
+    background-color: #45a049;
+}

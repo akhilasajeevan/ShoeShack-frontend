@@ -1,77 +1,133 @@
-.login-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #e4c3c313;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(41, 34, 34, 0.1);
-    /* width: 500px; */
-    /* background-image: url('https://www.google.com/search?q=shoes%20website%20background%20images&tbm=isch&prmd=isvnbmtz&hl=en&sa=X&ved=0CDAQrNwCKAJqFwoTCIDspaOSo4YDFQAAAAAdAAAAABAI&biw=1320&bih=613#imgrc=QHV1xMfQfZuO-M');
-    background-size: cover; /* Adjusts the background image size to cover the entire container */
-    /* background-position: center 
- */
-/* background-image: url('https://img.freepik.com/free-photo/gym-composition-with-sport-elements_23-2147915636.jpg?w=740&t=st=1716446001~exp=1716446601~hmac=cd6b111dd992342d6e3233df0693245614bc3cb34d145176c95c990c00d40dac');
-*/
-}
-.login-container h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    /* width: 500px; */
-}
+/* UserLogin.css
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
-    /* width: 500px; */
-}
-
-.login-container label {
-    margin-bottom: 10px;
-    width: max-content;
-}
-
-.login-container input {
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-}
-
-.login-container button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #0056b3;
-}
-#username{
-
-
-    width: 500px;
-}
-#password{
-
-
-    width: 500px;
-}
-#login{
-
-    width:500px;
-}
-#outer{
-    background-image: url('https://img.freepik.com/free-photo/gym-composition-with-sport-elements_23-2147915636.jpg?w=740&t=st=1716446001~exp=1716446601~hmac=cd6b111dd992342d6e3233df0693245614bc3cb34d145176c95c990c00d40dac');
-
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Make the outer container cover the full viewport height */
+.user-login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    height: 100vh;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+}
+
+.user-login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-login-form .user-login-input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user-login-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-login-form .user-login-error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.user-login-form .user-login-button-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.user-login-form .user-login-button {
+    background-color: #22c55e;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-login-form .user-login-button:hover {
+    background-color: #16a34a;
+} */
+
+
+
+/* UserLogin.css */
+
+.user-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+}
+
+.user-login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-login-form .user-login-input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user-login-form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-login-form .user-login-error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.user-login-form .user-login-button-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.user-login-form .user-login-button {
+    background-color: #22c55e;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-login-form .user-login-button:hover {
+    background-color: #16a34a;
 }

@@ -1,11 +1,9 @@
-/* Home.css */
 
-/* Home.css */
 .home-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust height as needed */
-  background-color: #fff; /* Fallback color */
+  height: 100vh; 
+  background-color: #fff; 
 }
 
 .background-img {
@@ -14,15 +12,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Make sure the image covers the entire container */
-  z-index: -1; /* Send the image to the background */
+  object-fit: cover; 
+  z-index: -1; 
 }
 
 #image {
   text-align: center;
-  padding-top: 20px; /* Adjust as needed */
+  padding-top: 20px; 
 }
 
 h2 {
-  color: #fff; /* Example style for the text */
+  color: #fff;
 }

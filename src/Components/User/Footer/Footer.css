@@ -1,10 +1,4 @@
-/* /* #footermain{
-background-color: #a4a2ad;
-/* opacity: .5; */
-/* height:300px;
-width: auto; */ */
 
-/* } */
 #footermain {
     background-color: #0d4d8d;
     padding: 20px 0;
@@ -12,7 +6,7 @@ width: auto; */ */
     /* max-width: 100%; */
 }
 
-.container {
+.containerf {
     max-width: auto;
     margin: 0 auto;
     display: flex;

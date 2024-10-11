@@ -4,8 +4,9 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Userroute from './Route/Userroute';
 import Adminroute from './Route/Adminroute';
-// import Registrationpage from './Pages/User/Registrationpage';
-
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css"
+  
 function App() {
   return (
     <div>
@@ -13,14 +14,19 @@ function App() {
      
         <Routes>
           <Route path="/*" element={<Userroute/>} />
-          <Route path="/admin" element={<Adminroute/>} />
+          <Route path="/admin/*" element={<Adminroute/>} />
           {/* Define other routes here */}
+        
+         
         </Routes>
-      
-    </BrowserRouter>
+      <ToastContainer/>
+    
+            </BrowserRouter>
+
+
     
     </div>
-    // <div><Registrationpage/></div>
+    
   );
 }
 

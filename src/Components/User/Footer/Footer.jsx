@@ -6,7 +6,7 @@ function Footer() {
       <div id='footermain'>
 
       <footer>
-    <div class="container">
+    <div class="containerf">
         <div class="footer-column">
             <h3>TOP CATEGORIES</h3>
            

@@ -1,0 +1,149 @@
+/* 
+
+
+
+
+
+
+   
+
+
+   .product-list {
+    padding: 20px;
+  }
+  
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px; 
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    object-fit: cover;
+  }
+  
+  .product-description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .product-price {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .product-category {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+   */
+
+   
+
+
+   .product-list {
+    padding: 20px;
+  }
+  
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Full width within the grid column */
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust max-height as needed */
+    object-fit: cover;
+  }
+  
+  .product-description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .product-price {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .product-category {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .edit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1200px) {
+    .product-cards {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-cards {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-cards {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
+  
